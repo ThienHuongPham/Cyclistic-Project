@@ -31,15 +31,17 @@ FROM `first-campaign-415415.cyclistic.map`
 GROUP BY member_casual;
 
 --Find top 10 most famous station for annual members
-SELECT station_name, total_trips
+SELECT station_name, SUM(total_trips) AS no_of_trips
 FROM `first-campaign-415415.cyclistic.map`
 WHERE member_casual = 'member'
-ORDER BY total_trips DESC
+GROUP BY station_name
+ORDER BY SUM(total_trips) DESC
 LIMIT 10;
 
 --Find top 10 most famous station for casual riders
-SELECT station_name, total_trips
+SELECT station_name, SUM(total_trips) AS no_of_trips
 FROM `first-campaign-415415.cyclistic.map`
 WHERE member_casual = 'casual'
-ORDER BY total_trips DESC
+GROUP BY station_name
+ORDER BY SUM(total_trips) DESC
 LIMIT 10

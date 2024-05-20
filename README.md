@@ -1,4 +1,4 @@
-# Cyclistic-Project
+# Cyclistic Insights: Data analysis for developing marketing strategies
 
 **Skills:** data manipulation, data cleaning, data modeling, data analysis, data visualization, SQL, BigQuery, Spreadsheet, Tableau
 
